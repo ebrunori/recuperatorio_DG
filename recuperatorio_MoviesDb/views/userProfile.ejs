@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <%- include('./partials/head') %>
+
+  <body>
+    <%- include('./partials/header') %>
+
+  <main>
+    <div class="cuadro-ppal-profile">
+      <h1>Hola <%= user.name%>!</h1>
+      <div class="cuadro-email">
+        <h3><%= user.email%></h3>
+      </div>
+      <br>
+      <div>
+        <% if (user.rol == 0) { %>
+          <p>Usuario Visitante </p>
+          <% } else {%>
+          <p>Usuario Administrador </p>
+          <% } %>
+      </div>
+    </div>
+
+  </main>
+</body>
+
+</html>

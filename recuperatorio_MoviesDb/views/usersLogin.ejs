@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('./partials/head') %>
+
+    <body>
+      <%- include('./partials/header') %>
+        <main>
+            <div class="login-cuadro-ppal">
+                <h1>Iniciar Sesión</h1>
+                <form class="login-placeholder" action='/users/login' method="POST">
+            <input type="email" name="email" id="emailLogin" placeholder="Email*">
+            <% if (locals.errors && errors.email) { %>
+            <div class="errors">
+            <%= errors.email.msg %>
+            </div>
+            <% } %>
+            <input type="password" name="password" id ="passwordLogin" placeholder="Contraseña*" class="<%= locals.errors && errors.password ?'is-invalid':null%>"/>
+            <span class="password-validation"></span>
+            </div>
+
+            <div class="login-check">
+                <div> <input class="check" type="checkbox" name="remember_user">Recordar mi usuario</div>
+            <a href="#">¿Has olvidado tu contraseña?</a>
+            </div>
+
+            <div class="login-check"><button class="register-registrarme" type="submit">INICIAR SESIÓN</button></div>
+            </form>
+         </div>
+
+
+  </main>
+</body>
+
+
+</html>

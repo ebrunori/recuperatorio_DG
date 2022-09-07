@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('./partials/head') %>
+
+    <body>
+      <%- include('./partials/header') %>
+            <main>
+                <div class="register-cuadro-ppal">
+                    <h1>Editar Usuario</h1>
+                    <form class="register-form" action="/users/edit/<%= user.id %> " method="POST">
+                        <div class="register-datos">
+                            <h3>Datos personales</h3>
+                            <p>
+                                <input type="text" name="name" id="name" placeholder="NOMBRE" class="register-placeholder" value=<%= user.name %>>
+                                <span class="div-name-errors"></span>
+
+                                <% if (locals.errors && errors.name) { %>
+                                    <div class="errors"> <%= errors.name.msg %></div>                    
+                                <% } %>
+                            </p>
+                            <p><input type="text" name="email" id="email" class="register-placeholder" placeholder="Email*" value=<%= user.email %>>
+                            <span class="div-email-errors"></span></p>
+                            <% if (locals.errors && errors.email) { %>
+                                <div class="errors"> <%= errors.email.msg %></div>                    
+                            <% } %>
+                            <br>
+                            <p><input type="checkbox" name="rol" value="0"> Usuario </p>
+                            <p><input type="checkbox" name="rol" value="1"> Administrador </p>
+
+                            <br>
+                            <button class="register-registrarme">EDITAR MI CUENTA</button>
+                        </div>
+                    </form>
+                </div>
+
+            </main>
+    </body>
+
+</html>

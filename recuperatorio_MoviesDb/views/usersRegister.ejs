@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('./partials/head') %>
+
+    <body>
+      <%- include('./partials/header') %>
+            <main>
+                <div class="register-cuadro-ppal">
+                    <h1>Registrarme</h1>
+                    <form class="register-placeholder" action="/users/register" method="POST">
+                        <div>
+                            <h3>Datos personales</h3>
+                                <input type="text" name="name" id="" placeholder="NOMBRE">
+                                <span class="div-name-errors"></span>
+
+                                <% if (locals.errors && errors.name) { %>
+                                    <div class="errors"> <%= errors.name.msg %></div>                    
+                                <% } %>
+                                <input type="text" name="email" id="" class="register-placeholder" placeholder="Email*">
+                                <span class="div-email-errors"></span>
+                                <% if (locals.errors && errors.email) { %>
+                                <div class="errors"> <%= errors.email.msg %></div>                    
+                                <% } %>
+                                <input type="password" name="password" id="password" class="register-placeholder" placeholder="Contraseña*">
+                                <span class="div-password-errors"></span>
+                                 <% if (locals.errors && errors.password) { %>
+                                <div class="errors"> <%= errors.password.msg %></div>                    
+                                <% } %>
+
+                                <br>
+                                <button class="register-registrarme">CREAR MI CUENTA</button>
+                                </div>
+                    </form>
+                </div>
+
+            </main>
+    </body>
+
+</html>

@@ -1,0 +1,57 @@
+.login-cuadro-ppal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    border: solid 2px #e8e8e7;
+    border-radius: 15px;
+    margin: 35px 300px;
+}
+
+
+.login {
+    background-color: #c21d17;
+    border: 1px #c21d17 solid;
+    filter: drop-shadow(0 0 0.2rem #330807);
+    border-radius: 20px;
+    padding: 10px 25px;
+    color: white;
+    width: 270px;
+    font-size: 18px;
+    margin: 25px 0;
+}
+
+.login:hover {
+    background-color: #e8e8e7;
+    color: #c21d17;
+}
+
+.login-placeholder, .login-placeholder input {
+    display: flex;    
+    flex-direction: column;
+    padding: 10px;
+    width: 250px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.login-placeholder input{
+    border: 1px solid #160812;
+}
+
+.login-check {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: medium;
+    }
+
+
+.errors{
+    width: 100%;
+    color: red;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %>
+
+    <body>
+      <%- include('./partials/header') %>
+      <main>
+    <h1><%= movie.title %> </h1>    
+    <br>
+    <p>CALIFICACIÓN: <%= movie.rating %> </p>
+    <p>PREMIOS: <%= movie.awards %> </p>
+    <p>DURACIÓN: <%= movie.length + ' min'%> </p>
+    <p>FECHA DE CREACIÓN: <%= movie.release_date %> </p>
+    <% if (movie.genre_id == null) { %>
+        <p>GENERO: No posee </p>
+        <% } else {%>
+        <p>GENERO: <%= movie.genre.name %> </p>
+        <% } %>
+    <p>ACTORES:
+        <ul>
+            <% for( let i = 0; i < movie.actors.length; i++ ) { %>
+            <li>
+                <%= movie.actors[i].last_name %>, <%= movie.actors[i].first_name %>
+            </li>
+            <% } %>
+    
+        </ul>  
+
+    <br>
+    <section>
+        <a class="botonModificar" href="/movies/edit/<%= movie.id %>">Modificar</a>
+        <a class="botonBorrar" href="/movies/delete/<%= movie.id %>">Borrar</a>
+        <a class="botonVolver" href="/">Listado de Películas</a>
+    </section>
+</main>
+</body>
+</html>

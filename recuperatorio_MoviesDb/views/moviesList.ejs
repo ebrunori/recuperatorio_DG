@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('./partials/head') %>
+
+    <body>
+      <%- include('./partials/header') %>
+<main>
+    <ul>
+        <% for( let i = 0; i < movies.length; i++ ) { %>
+        <li>
+            <a style="text-decoration: none;" href="/movies/detail/<%= movies[i].id %>"><%= movies[i].title %></a>
+        </li>
+        <% } %>
+
+    </ul><br>  
+
+    <p>
+        <a class="botonAgregar" href="/movies/add">Agregar una Pelicula</a>
+    </p>
+    </main>   
+</body>
+</html>

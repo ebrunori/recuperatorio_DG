@@ -1,0 +1,21 @@
+.cuadro-ppal-profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    border: solid 2px #e8e8e7;
+    border-radius: 15px;
+}
+
+.cuadro-ppal-profile img{
+    height: 20%;
+    width: 20%;
+    text-align: center;
+}
+
+.cuadro-email{
+    text-align: center;
+    background: #c21d17 0.4;
+}
+

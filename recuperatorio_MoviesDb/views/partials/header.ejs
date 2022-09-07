@@ -1,0 +1,23 @@
+<div class="contenedorHeader">
+    <header>
+      <a href="/">
+        <figure><img src="/images/logo-DH.png" alt="Logo Digital House"></figure></a>
+      <nav>
+        <div class="dropdown-login">
+          <div class="bars-login">
+            <button><i class="fa-solid fa-circle-user icon"></i></button>
+            <ul>
+              <% if (!locals.isLogged) {%>
+              <li><a href="/users/login">Iniciar sesión</a></li>
+              <li><a href="/users/register">Registrarme</a></li>
+              <% } else { %>
+              <li><a href="/users/userProfile">Mi perfil</a></li>
+              <li><a href="/users/logout">Cerrar sesión</a></li>
+              <li><a href="/users/edit/:id">Editar mi usuario</a></li>
+              <% } %>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  
+    </header>
